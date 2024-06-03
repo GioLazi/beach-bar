@@ -36,14 +36,22 @@ nav {
     background-color: #fff;
     cursor: pointer;
     font-size: 12px;
+    color: #000;
+    font-weight: bold; /* Сделать текст жирным */
 }
 
 .filter-button:hover {
     background-color: #ddd;
 }
 
+.filter-button.active {
+    background-color: #00bfa5;
+    color: #fff; /* Цвет текста белый для активной кнопки */
+    border-color: #00bfa5;
+}
+
 .filter-button img.icon {
-    width: 20px; /* Можно изменить размер в зависимости от вашего дизайна */
+    width: 20px;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -73,7 +81,7 @@ nav {
 }
 
 .price::after {
-    content: url('icons/Vector.jpg'); /* Замените на ваш путь к изображению иконки лари */
+    content: url('icons/Vector.jpg');
     margin-left: 5px;
 }
 
