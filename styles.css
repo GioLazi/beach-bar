@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.menu-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.header-logo {
+    max-width: 100%;
+    height: auto;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-button {
+    padding: 5px 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.filter-button:hover {
+    background-color: #ddd;
+}
+
+.filter-button img.icon {
+    width: 20px; /* Можно изменить размер в зависимости от вашего дизайна */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.menu h2 {
+    color: #00bfa5;
+    font-size: 20px;
+    margin: 0 0 10px 0;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.menu-item span {
+    font-size: 16px;
+}
+
+.price::after {
+    content: url('icons/Vector.jpg'); /* Замените на ваш путь к изображению иконки лари */
+    margin-left: 5px;
+}
+
+.icecream {
+    color: #00bfa5;
+}
