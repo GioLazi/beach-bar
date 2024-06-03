@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paulaner Beach Bar Menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="menu-container">
+        <header>
+            <img src="icons/Frame 40517.png" alt="Paulaner Beach Bar" class="header-logo"> <!-- Замените на ваш путь к изображению -->
+        </header>
+        <nav>
+            <button class="filter-button" onclick="toggleFilter(this, 'all')">ALL</button>
+            <button class="filter-button" onclick="toggleFilter(this, 'soft-drinks')">Soft drinks</button>
+            <button class="filter-button" onclick="toggleFilter(this, 'cocktails')">Cocktails</button>
+            <button class="filter-button" onclick="toggleFilter(this, 'wine')">Wine</button>
+            <button class="filter-button" onclick="toggleFilter(this, 'beer')">Beer</button>
+            <button class="filter-button" onclick="toggleFilter(this, 'alcohol')">Alcohol</button>
+            <button class="filter-button" onclick="toggleFilter(this, 'coffee')">Coffee</button>
+            <button class="filter-button" onclick="toggleFilter(this, 'snacks')">Snacks</button>
+            <button class="filter-button" onclick="toggleFilter(this, 'hookah')">
+                <img src="icons/hookah_5390139.png" alt="Hookah" class="icon"> <!-- Изображение кальяна -->
+            </button>
+        </nav>
+        <section class="menu">
+            <div class="menu-item" data-category="coffee">
+                <span>ESPRESSO</span><span class="price">7.00</span>
+            </div>
+            <div class="menu-item" data-category="coffee">
+                <span>AMERICANO</span><span class="price">7.00</span>
+            </div>
+            <div class="menu-item" data-category="coffee">
+                <span>CAPUCCINNO</span><span class="price">7.00</span>
+            </div>
+            <div class="menu-item" data-category="coffee">
+                <span>LATTE</span><span class="price">7.00</span>
+            </div>
+            <div class="menu-item" data-category="coffee">
+                <span>ICED COFFEE</span><span class="price">7.00</span>
+            </div>
+            <div class="menu-item" data-category="coffee">
+                <span>ICED COFFEE + <span class="icecream">ICECREAM</span></span><span class="price">7.00</span>
+            </div>
+            <!-- Добавьте другие элементы меню для других категорий здесь -->
+            <div class="menu-item" data-category="soft-drinks">
+                <span>Coca Cola</span><span class="price">5.00</span>
+            </div>
+            <div class="menu-item" data-category="soft-drinks">
+                <span>Sprite</span><span class="price">5.00</span>
+            </div>
+            <!-- Пример для других категорий -->
+        </section>
+    </div>
+
+    <script>
+        let activeFilters = new Set();
+
+        function toggleFilter(button, category) {
+            if (category === 'all') {
+                activeFilters.clear();
+                document.querySelectorAll('.filter-button').forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                filterMenu();
+                return;
+            }
+
+            const allButton = document.querySelector('.filter-button[onclick*="all"]');
+            allButton.classList.remove('active');
+
+            if (activeFilters.has(category)) {
+                activeFilters.delete(category);
+                button.classList.remove('active');
+            } else {
+                activeFilters.add(category);
+                button.classList.add('active');
+            }
+
+            if (activeFilters.size === 0) {
+                allButton.classList.add('active');
+            }
+
+            filterMenu();
+        }
+
+        function filterMenu() {
+            const items = document.querySelectorAll('.menu-item');
+            if (activeFilters.size === 0) {
+                items.forEach(item => item.style.display = 'flex');
+                return;
+            }
+
+            items.forEach(item => {
+                const itemCategory = item.getAttribute('data-category');
+                if (activeFilters.has(itemCategory)) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

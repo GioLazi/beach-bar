@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paulaner Beach Bar Menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="menu-container">
+        <header>
+            <img src="icons/Frame 40517.png" alt="Paulaner Beach Bar" class="header-logo"> <!-- Замените на ваш путь к изображению -->
+        </header>
+        <nav>
+            <button class="filter-button" onclick="filterMenu('all')">ALL</button>
+            <button class="filter-button" onclick="filterMenu('soft-drinks')">Soft drinks</button>
+            <button class="filter-button" onclick="filterMenu('cocktails')">Cocktails</button>
+            <button class="filter-button" onclick="filterMenu('wine')">Wine</button>
+            <button class="filter-button" onclick="filterMenu('beer')">Beer</button>
+            <button class="filter-button" onclick="filterMenu('alcohol')">Alcohol</button>
+            <button class="filter-button" onclick="filterMenu('coffee')">Coffee</button>
+            <button class="filter-button" onclick="filterMenu('snacks')">Snacks</button>
+            <button class="filter-button" onclick="filterMenu('hookah')">
+                <img src="icons/hookah_5390139.png" alt="Hookah" class="icon"> <!-- Изображение кальяна -->
+            </button>
+        </nav>
+        <section class="menu">
+            <div class="menu-item" data-category="coffee">
+                <span>ESPRESSO</span><span class="price">7.00</span>
+            </div>
+            <div class="menu-item" data-category="coffee">
+                <span>AMERICANO</span><span class="price">7.00</span>
+            </div>
+            <div class="menu-item" data-category="coffee">
+                <span>CAPUCCINNO</span><span class="price">7.00</span>
+            </div>
+            <div class="menu-item" data-category="coffee">
+                <span>LATTE</span><span class="price">7.00</span>
+            </div>
+            <div class="menu-item" data-category="coffee">
+                <span>ICED COFFEE</span><span class="price">7.00</span>
+            </div>
+            <div class="menu-item" data-category="coffee">
+                <span>ICED COFFEE + <span class="icecream">ICECREAM</span></span><span class="price">7.00</span>
+            </div>
+            <!-- Добавьте другие элементы меню для других категорий здесь -->
+            <div class="menu-item" data-category="soft-drinks">
+                <span>Coca Cola</span><span class="price">5.00</span>
+            </div>
+            <div class="menu-item" data-category="soft-drinks">
+                <span>Sprite</span><span class="price">5.00</span>
+            </div>
+            <!-- Пример для других категорий -->
+        </section>
+    </div>
+
+    <script>
+        function filterMenu(category) {
+            var items = document.querySelectorAll('.menu-item');
+            items.forEach(function(item) {
+                if (category === 'all' || item.getAttribute('data-category') === category) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
