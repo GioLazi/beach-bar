@@ -15,7 +15,7 @@
         }
 
         function translatePage(languageCode) {
-            const googleTranslateElement = document.querySelector('.goog-te-combo');
+            var googleTranslateElement = document.querySelector('.goog-te-combo');
             if (googleTranslateElement) {
                 googleTranslateElement.value = languageCode;
                 googleTranslateElement.dispatchEvent(new Event('change'));
@@ -23,13 +23,13 @@
         }
 
         function toggleLanguageMenu() {
-            const menu = document.getElementById('language-menu');
+            var menu = document.getElementById('language-menu');
             menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
         }
 
         document.addEventListener('click', function(event) {
-            const menu = document.getElementById('language-menu');
-            const button = document.querySelector('.language-button');
+            var menu = document.getElementById('language-menu');
+            var button = document.querySelector('.language-button');
             if (!menu.contains(event.target) && !button.contains(event.target)) {
                 menu.style.display = 'none';
             }
@@ -51,43 +51,42 @@
         </header>
         <div id="google_translate_element" style="display: none;"></div>
         <nav>
-            <button class="filter-button" onclick="toggleFilter(this, 'all')">ALL</button>
-            <button class="filter-button" onclick="toggleFilter(this, 'soft-drinks')">Soft drinks</button>
-            <button class="filter-button" onclick="toggleFilter(this, 'cocktails')">Cocktails</button>
-            <button class="filter-button" onclick="toggleFilter(this, 'wine')">Wine</button>
-            <button class="filter-button" onclick="toggleFilter(this, 'beer')">Beer</button>
-            <button class="filter-button" onclick="toggleFilter(this, 'alcohol')">Alcohol</button>
-            <button class="filter-button" onclick="toggleFilter(this, 'coffee')">Coffee</button>
-            <button class="filter-button" onclick="toggleFilter(this, 'snacks')">Snacks</button>
+            <button class="filter-button" onclick="toggleFilter(this, 'all')" data-i18n="filter.all">ALL</button>
+            <button class="filter-button" onclick="toggleFilter(this, 'soft-drinks')" data-i18n="filter.soft_drinks">Soft drinks</button>
+            <button class="filter-button" onclick="toggleFilter(this, 'cocktails')" data-i18n="filter.cocktails">Cocktails</button>
+            <button class="filter-button" onclick="toggleFilter(this, 'wine')" data-i18n="filter.wine">Wine</button>
+            <button class="filter-button" onclick="toggleFilter(this, 'beer')" data-i18n="filter.beer">Beer</button>
+            <button class="filter-button" onclick="toggleFilter(this, 'alcohol')" data-i18n="filter.alcohol">Alcohol</button>
+            <button class="filter-button" onclick="toggleFilter(this, 'coffee')" data-i18n="filter.coffee">Coffee</button>
+            <button class="filter-button" onclick="toggleFilter(this, 'snacks')" data-i18n="filter.snacks">Snacks</button>
             <button class="filter-button" onclick="toggleFilter(this, 'hookah')">
                 <img src="icons/hookah_5390139.png" alt="Hookah" class="icon">
             </button>
         </nav>
         <section class="menu">
             <div class="menu-item" data-category="coffee">
-                <span>ESPRESSO</span><span class="price">7.00</span>
+                <span data-i18n="menu.espresso">ESPRESSO</span><span class="price">7.00</span>
             </div>
             <div class="menu-item" data-category="coffee">
-                <span>AMERICANO</span><span class="price">7.00</span>
+                <span data-i18n="menu.americano">AMERICANO</span><span class="price">7.00</span>
             </div>
             <div class="menu-item" data-category="coffee">
-                <span>CAPUCCINNO</span><span class="price">7.00</span>
+                <span data-i18n="menu.cappuccino">CAPPUCCINO</span><span class="price">7.00</span>
             </div>
             <div class="menu-item" data-category="coffee">
-                <span>LATTE</span><span class="price">7.00</span>
+                <span data-i18n="menu.latte">LATTE</span><span class="price">7.00</span>
             </div>
             <div class="menu-item" data-category="coffee">
-                <span>ICED COFFEE</span><span class="price">7.00</span>
+                <span data-i18n="menu.iced_coffee">ICED COFFEE</span><span class="price">7.00</span>
             </div>
             <div class="menu-item" data-category="coffee">
-                <span>ICED COFFEE + <span class="icecream">ICECREAM</span></span><span class="price">7.00</span>
-            </div>
-            <!-- Add more menu items here -->
-            <div class="menu-item" data-category="soft-drinks">
-                <span>Coca Cola</span><span class="price">5.00</span>
+                <span data-i18n="menu.iced_coffee_icecream">ICED COFFEE + <span class="icecream">ICECREAM</span></span><span class="price">7.00</span>
             </div>
             <div class="menu-item" data-category="soft-drinks">
-                <span>Sprite</span><span class="price">5.00</span>
+                <span data-i18n="menu.coca_cola">Coca Cola</span><span class="price">5.00</span>
+            </div>
+            <div class="menu-item" data-category="soft-drinks">
+                <span data-i18n="menu.sprite">Sprite</span><span class="price">5.00</span>
             </div>
         </section>
     </div>
