@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #ffffff;
 }
 
 .menu-container {
@@ -41,7 +41,7 @@ nav {
 }
 
 .filter-button:hover {
-    background-color: #ddd;
+    background-color: #ffffff;
 }
 
 .filter-button.active {
