@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
         .catch(error => console.error('Error loading menu:', error));
 
     function renderMenu(data) {
-        const menuContainer = document.getElementById('menu-container');
+        const menuContainer = document.querySelector('.menu');
         menuContainer.innerHTML = ''; // Очистите контейнер перед добавлением новых элементов
 
         data.forEach(item => {
