@@ -132,6 +132,6 @@ nav {
 .image-container img {
     width: 350px; /* Укажите нужную ширину */
     height: 200px; /* Высота будет автоматически корректироваться пропорционально ширине */
-    margin-bottom: 10PX;
+    margin-bottom: 20PX;
     border-radius: 6px;
 }
