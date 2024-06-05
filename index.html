@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paulaner Beach Bar Menu</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .menu-header {
+            font-weight: bold;
+        }
+        .image-container {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
     <div class="menu-container">
@@ -24,6 +39,9 @@
                 <img src="icons/hookah_5390139.png" alt="Hookah" class="icon">
             </button>
         </nav>
+        <div class="image-container" id="filter-image">
+            <img src="" alt="" id="filter-image-src">
+        </div>
         <section class="menu">
             <!-- Wine Header -->
             <div class="menu-header" data-category="wine">
@@ -469,8 +487,13 @@
 
         function filterMenu() {
             const items = document.querySelectorAll('.menu-item, .menu-header');
+            const imageContainer = document.getElementById('filter-image');
+            const imageSrc = document.getElementById('filter-image-src');
+            let showImage = false;
+
             if (activeFilters.size === 0) {
                 items.forEach(item => item.style.display = 'flex');
+                imageContainer.style.display = 'none';
                 return;
             }
 
@@ -478,10 +501,36 @@
                 const itemCategory = item.getAttribute('data-category');
                 if (activeFilters.has(itemCategory) || (itemCategory === 'tea' && activeFilters.has('coffee'))) {
                     item.style.display = 'flex';
+                    showImage = true;
                 } else {
                     item.style.display = 'none';
                 }
             });
+
+            if (showImage) {
+                imageContainer.style.display = 'flex';
+                if (activeFilters.has('coffee') || activeFilters.has('tea')) {
+                    imageSrc.src = 'coffee.png';
+                } else if (activeFilters.has('soft-drinks')) {
+                    imageSrc.src = 'path/to/soft-drinks-image.png';
+                } else if (activeFilters.has('cocktails')) {
+                    imageSrc.src = 'path/to/cocktails-image.png';
+                } else if (activeFilters.has('wine')) {
+                    imageSrc.src = 'path/to/wine-image.png';
+                } else if (activeFilters.has('beer')) {
+                    imageSrc.src = 'path/to/beer-image.png';
+                } else if (activeFilters.has('alcohol')) {
+                    imageSrc.src = 'path/to/alcohol-image.png';
+                } else if (activeFilters.has('snacks')) {
+                    imageSrc.src = 'path/to/snacks-image.png';
+                } else if (activeFilters.has('hookah')) {
+                    imageSrc.src = 'path/to/hookah-image.png';
+                } else {
+                    imageContainer.style.display = 'none';
+                }
+            } else {
+                imageContainer.style.display = 'none';
+            }
         }
     </script>
 </body>
