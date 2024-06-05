@@ -18,36 +18,421 @@
             <button class="filter-button" onclick="toggleFilter(this, 'wine')" data-i18n="filter.wine">Wine</button>
             <button class="filter-button" onclick="toggleFilter(this, 'beer')" data-i18n="filter.beer">Beer</button>
             <button class="filter-button" onclick="toggleFilter(this, 'alcohol')" data-i18n="filter.alcohol">Alcohol</button>
-            <button class="filter-button" onclick="toggleFilter(this, 'coffee')" data-i18n="filter.coffee">Coffee</button>
-            <button class="filter-button" onclick="toggleFilter(this, 'snacks')" data-i18n="filter.snacks">Snacks</button>
+            <button class="filter-button" onclick="toggleFilter(this, 'coffee')" data-i18n="filter.coffee">Coffee & Tea</button>
+            <button class="filter-button" onclick="toggleFilter(this, 'snacks')" data-i18n="filter.snacks">Snacks & Desserts</button>
             <button class="filter-button" onclick="toggleFilter(this, 'hookah')">
                 <img src="icons/hookah_5390139.png" alt="Hookah" class="icon">
             </button>
         </nav>
         <section class="menu">
+            <!-- Wine Header -->
+            <div class="menu-header" data-category="wine">
+                <span>WINE</span>
+            </div>
+            <!-- Red Dry -->
+            <div class="menu-header" data-category="wine">
+                <span>RED DRY</span>
+            </div>
+            <div class="menu-item" data-category="wine">
+                <span>Saperavi (glass/bottle)</span><span class="price">15/45</span>
+            </div>
+            <div class="menu-item" data-category="wine">
+                <span>Mukuzani (glass/bottle)</span><span class="price">20/60</span>
+            </div>
+            <!-- Red Semi Sweet -->
+            <div class="menu-header" data-category="wine">
+                <span>RED SEMI SWEET</span>
+            </div>
+            <div class="menu-item" data-category="wine">
+                <span>Kindzmarauli (glass/bottle)</span><span class="price">20/65</span>
+            </div>
+            <div class="menu-item" data-category="wine">
+                <span>Khvanchkara (glass/bottle)</span><span class="price">25/85</span>
+            </div>
+            <!-- White Dry -->
+            <div class="menu-header" data-category="wine">
+                <span>WHITE DRY</span>
+            </div>
+            <div class="menu-item" data-category="wine">
+                <span>Mtsvane Kisi (glass/bottle)</span><span class="price">15/50</span>
+            </div>
+            <div class="menu-item" data-category="wine">
+                <span>Tsinandali (glass/bottle)</span><span class="price">12/35</span>
+            </div>
+            <div class="menu-item" data-category="wine">
+                <span>Colikauri (glass/bottle)</span><span class="price">12/35</span>
+            </div>
+            <!-- White Semi Sweet -->
+            <div class="menu-header" data-category="wine">
+                <span>WHITE SEMI SWEET</span>
+            </div>
+            <div class="menu-item" data-category="wine">
+                <span>Tvishi (glass/bottle)</span><span class="price">15/50</span>
+            </div>
+            <!-- Rose -->
+            <div class="menu-header" data-category="wine">
+                <span>ROSE</span>
+            </div>
+            <div class="menu-item" data-category="wine">
+                <span>Pirosmani Semi Sweet (glass/bottle)</span><span class="price">15/50</span>
+            </div>
+            <div class="menu-item" data-category="wine">
+                <span>Saperavi Dry (glass/bottle)</span><span class="price">15/50</span>
+            </div>
+            <!-- Sparkling Wine -->
+            <div class="menu-header" data-category="wine">
+                <span>SPARKLING WINE</span>
+            </div>
+            <div class="menu-item" data-category="wine">
+                <span>Tetri Brut (glass/bottle)</span><span class="price">15/50</span>
+            </div>
+            <div class="menu-item" data-category="wine">
+                <span>Roze Brut (glass/bottle)</span><span class="price">15/50</span>
+            </div>
+            <!-- Draft Beer Header -->
+            <div class="menu-header" data-category="beer">
+                <span>DRAFT BEER</span>
+            </div>
+            <!-- Draft Beer List -->
+            <div class="menu-item" data-category="beer">
+                <span>Paulaner Unfiltered</span><span class="price">15.00</span>
+            </div>
+            <div class="menu-item" data-category="beer">
+                <span>Pilsner</span><span class="price">15.00</span>
+            </div>
+            <div class="menu-item" data-category="beer">
+                <span>Staropilsen 10</span><span class="price">10.00</span>
+            </div>
+            <div class="menu-item" data-category="beer">
+                <span>Lazika (Georgian Beer)</span><span class="price">7.00</span>
+            </div>
+            <!-- Paulaner Header -->
+            <div class="menu-header" data-category="beer">
+                <span>PAULANER</span>
+            </div>
+            <!-- Paulaner Beer List -->
+            <div class="menu-item" data-category="beer">
+                <span>Unfiltered Can/Bottle</span><span class="price">15.00</span>
+            </div>
+            <div class="menu-item" data-category="beer">
+                <span>FC Bayern Unfiltered Can/Bottle</span><span class="price">15.00</span>
+            </div>
+            <div class="menu-item" data-category="beer">
+                <span>Munich Can/Bottle</span><span class="price">15.00</span>
+            </div>
+            <div class="menu-item" data-category="beer">
+                <span>Lemon Radler 2.5% Can/Bottle</span><span class="price">15.00</span>
+            </div>
+            <div class="menu-item" data-category="beer">
+                <span>Grapefruit Rose 2.5% Can/Bottle</span><span class="price">15.00</span>
+            </div>
+            <div class="menu-item" data-category="beer">
+                <span>Unfiltered Dark Can/Bottle</span><span class="price">15.00</span>
+            </div>
+            <div class="menu-item" data-category="beer">
+                <span>Non-Alcoholic</span><span class="price">15.00</span>
+            </div>
+            <!-- Weihenstephaner Header -->
+            <div class="menu-header" data-category="beer">
+                <span>WEIHENSTEPHANER</span>
+            </div>
+            <!-- Weihenstephaner Beer List -->
+            <div class="menu-item" data-category="beer">
+                <span>Original</span><span class="price">15.00</span>
+            </div>
+            <div class="menu-item" data-category="beer">
+                <span>Weissbier</span><span class="price">15.00</span>
+            </div>
+            <!-- Hacker-Pschorr Header -->
+            <div class="menu-header" data-category="beer">
+                <span>HACKER-PSCHORR</span>
+            </div>
+            <!-- Hacker-Pschorr Beer List -->
+            <div class="menu-item" data-category="beer">
+                <span>Unfiltered Can</span><span class="price">15.00</span>
+            </div>
+            <div class="menu-item" data-category="beer">
+                <span>Gold</span><span class="price">15.00</span>
+            </div>
+            <!-- Coffee Header -->
+            <div class="menu-header" data-category="coffee">
+                <span>COFFEE</span>
+            </div>
+            <!-- New Coffee List -->
             <div class="menu-item" data-category="coffee">
-                <span data-i18n="menu.espresso">ESPRESSO</span><span class="price">7.00</span>
+                <span>Espresso</span><span class="price">5.00</span>
             </div>
             <div class="menu-item" data-category="coffee">
-                <span data-i18n="menu.americano">AMERICANO</span><span class="price">7.00</span>
+                <span>Americano</span><span class="price">6.00</span>
             </div>
             <div class="menu-item" data-category="coffee">
-                <span data-i18n="menu.cappuccino">CAPPUCCINO</span><span class="price">7.00</span>
+                <span>Cappuccino</span><span class="price">7.00</span>
             </div>
             <div class="menu-item" data-category="coffee">
-                <span data-i18n="menu.latte">LATTE</span><span class="price">7.00</span>
+                <span>Latte</span><span class="price">10.00</span>
             </div>
             <div class="menu-item" data-category="coffee">
-                <span data-i18n="menu.iced_coffee">ICED COFFEE</span><span class="price">7.00</span>
+                <span>Iced Coffee</span><span class="price">10.00</span>
             </div>
             <div class="menu-item" data-category="coffee">
-                <span data-i18n="menu.iced_coffee_icecream">ICED COFFEE + <span class="icecream">ICECREAM</span></span><span class="price">7.00</span>
+                <span>Iced Coffee with Milk</span><span class="price">12.00</span>
+            </div>
+            <div class="menu-item" data-category="coffee">
+                <span>Iced Coffee with Ice Cream</span><span class="price">15.00</span>
+            </div>
+            <div class="menu-item" data-category="coffee">
+                <span>Batumi Coffee</span><span class="price">4.00</span>
+            </div>
+            <!-- Tea Header -->
+            <div class="menu-header" data-category="tea">
+                <span>TEA</span>
+            </div>
+            <!-- Tea List -->
+            <div class="menu-item" data-category="tea">
+                <span>Raspberries</span><span class="price">10.00</span>
+            </div>
+            <div class="menu-item" data-category="tea">
+                <span>Black</span><span class="price">10.00</span>
+            </div>
+            <div class="menu-item" data-category="tea">
+                <span>Green</span><span class="price">10.00</span>
+            </div>
+            <div class="menu-item" data-category="tea">
+                <span>Chamomile</span><span class="price">10.00</span>
+            </div>
+            <!-- Soft Drinks Header -->
+            <div class="menu-header" data-category="soft-drinks">
+                <span>SOFT DRINKS</span>
+            </div>
+            <!-- Soft Drinks List -->
+            <div class="menu-item" data-category="soft-drinks">
+                <span>Cola/Sprite/Fanta</span><span class="price">5.00</span>
             </div>
             <div class="menu-item" data-category="soft-drinks">
-                <span data-i18n="menu.coca_cola">Coca Cola</span><span class="price">5.00</span>
+                <span>Juice</span><span class="price">5.00</span>
             </div>
             <div class="menu-item" data-category="soft-drinks">
-                <span data-i18n="menu.sprite">Sprite</span><span class="price">5.00</span>
+                <span>Cold Tea</span><span class="price">5.00</span>
+            </div>
+            <div class="menu-item" data-category="soft-drinks">
+                <span>Rad Rain</span><span class="price">8.00</span>
+            </div>
+            <div class="menu-item" data-category="soft-drinks">
+                <span>Red Bull</span><span class="price">12.00</span>
+            </div>
+            <div class="menu-item" data-category="soft-drinks">
+                <span>Borjomi</span><span class="price">4.00</span>
+            </div>
+            <div class="menu-item" data-category="soft-drinks">
+                <span>Water</span><span class="price">2.00</span>
+            </div>
+            <div class="menu-item" data-category="soft-drinks">
+                <span>Lemonade 0.33</span><span class="price">5.00</span>
+            </div>
+            <div class="menu-item" data-category="soft-drinks">
+                <span>Cappy</span><span class="price">5.00</span>
+            </div>
+            <!-- Fresh Juice Header -->
+            <div class="menu-header" data-category="soft-drinks">
+                <span>FRESH JUICE</span>
+            </div>
+            <!-- Fresh Juice List -->
+            <div class="menu-item" data-category="soft-drinks">
+                <span>Orange</span><span class="price">15.00</span>
+            </div>
+            <div class="menu-item" data-category="soft-drinks">
+                <span>Pomegranate</span><span class="price">15.00</span>
+            </div>
+            <div class="menu-item" data-category="soft-drinks">
+                <span>Grapefruit</span><span class="price">15.00</span>
+            </div>
+            <!-- Cocktails Header -->
+            <div class="menu-header" data-category="cocktails">
+                <span>ALCOHOL FREE</span>
+            </div>
+            <!-- Alcohol Free Cocktails -->
+            <div class="menu-item" data-category="cocktails">
+                <span>Mojito Lemonade</span><span class="price">15.00</span>
+            </div>
+            <div class="menu-item" data-category="cocktails">
+                <span>Banana Lemonade</span><span class="price">15.00</span>
+            </div>
+            <div class="menu-item" data-category="cocktails">
+                <span>Pomegranate Lemonade</span><span class="price">15.00</span>
+            </div>
+            <div class="menu-item" data-category="cocktails">
+                <span>Raspberry Mojito</span><span class="price">17.00</span>
+            </div>
+            <div class="menu-item" data-category="cocktails">
+                <span>Milkshake</span><span class="price">15.00</span>
+            </div>
+            <!-- Alcohol Cocktails Header -->
+            <div class="menu-header" data-category="cocktails">
+                <span>ALCOHOL COCKTAILS</span>
+            </div>
+            <!-- Added Cocktails -->
+            <div class="menu-item" data-category="cocktails">
+                <span>Baileys Beach</span><span class="price">30.00</span>
+            </div>
+            <div class="menu-item" data-category="cocktails">
+                <span>Pina Colada</span><span class="price">25.00</span>
+            </div>
+            <div class="menu-item" data-category="cocktails">
+                <span>Blue Lagoon</span><span class="price">25.00</span>
+            </div>
+            <div class="menu-item" data-category="cocktails">
+                <span>Aperol Spritz</span><span class="price">25.00</span>
+            </div>
+            <div class="menu-item" data-category="cocktails">
+                <span>Classic Mojito</span><span class="price">25.00</span>
+            </div>
+            <div class="menu-item" data-category="cocktails">
+                <span>Raspberry Mojito</span><span class="price">25.00</span>
+            </div>
+            <div class="menu-item" data-category="cocktails">
+                <span>Long Island Iced Tea</span><span class="price">25.00</span>
+            </div>
+            <div class="menu-item" data-category="cocktails">
+                <span>Long Island Energy</span><span class="price">30.00</span>
+            </div>
+            <div class="menu-item" data-category="cocktails">
+                <span>Sex on the Beach</span><span class="price">25.00</span>
+            </div>
+            <div class="menu-item" data-category="cocktails">
+                <span>Gin Tonic</span><span class="price">25.00</span>
+            </div>
+            <div class="menu-item" data-category="cocktails">
+                <span>Cuba Libre</span><span class="price">25.00</span>
+            </div>
+            <div class="menu-item" data-category="cocktails">
+                <span>Tequila Boom</span><span class="price">20.00</span>
+            </div>
+            <div class="menu-item" data-category="cocktails">
+                <span>Maitai</span><span class="price">25.00</span>
+            </div>
+            <!-- Shooters Header -->
+            <div class="menu-header" data-category="shooters">
+                <span>SHOOTERS</span>
+            </div>
+            <!-- Shooters -->
+            <div class="menu-item" data-category="shooters">
+                <span>Green Mexican</span><span class="price">12.00</span>
+            </div>
+            <div class="menu-item" data-category="shooters">
+                <span>B52</span><span class="price">10.00</span>
+            </div>
+            <!-- Hookah Header -->
+            <div class="menu-header" data-category="hookah">
+                <span>HOOKAH</span>
+            </div>
+            <!-- Hookah List -->
+            <div class="menu-item" data-category="hookah">
+                <span>Darkside / Musthave</span><span class="price">70.00</span>
+            </div>
+            <div class="menu-item" data-category="hookah">
+                <span>Brusko</span><span class="price">60.00</span>
+            </div>
+            <div class="menu-item" data-category="hookah">
+                <span>Smogmoon</span><span class="price">50.00</span>
+            </div>
+            <!-- Alcohol Header -->
+            <div class="menu-header" data-category="alcohol">
+                <span>ALCOHOL</span>
+            </div>
+            <!-- Alcohol List -->
+            <div class="menu-item" data-category="alcohol">
+                <span>Tequila</span><span class="price">12.00</span>
+            </div>
+            <div class="menu-item" data-category="alcohol">
+                <span>Vodka Absolut</span><span class="price">8.00</span>
+            </div>
+            <div class="menu-item" data-category="alcohol">
+                <span>Nemiroff</span><span class="price">6.00</span>
+            </div>
+            <div class="menu-item" data-category="alcohol">
+                <span>Chacha</span><span class="price">7.00</span>
+            </div>
+            <div class="menu-item" data-category="alcohol">
+                <span>Hennessy</span><span class="price">15.00</span>
+            </div>
+            <div class="menu-item" data-category="alcohol">
+                <span>Sarajishvili (Georgian Cognac)</span><span class="price">10.00</span>
+            </div>
+            <div class="menu-item" data-category="alcohol">
+                <span>Jack Daniels</span><span class="price">12.00</span>
+            </div>
+            <div class="menu-item" data-category="alcohol">
+                <span>Chivas 12</span><span class="price">20.00</span>
+            </div>
+            <div class="menu-item" data-category="alcohol">
+                <span>Jameson</span><span class="price">12.00</span>
+            </div>
+            <div class="menu-item" data-category="alcohol">
+                <span>Jim Beam</span><span class="price">12.00</span>
+            </div>
+            <div class="menu-item" data-category="alcohol">
+                <span>Rum Black / White</span><span class="price">10.00</span>
+            </div>
+            <div class="menu-item" data-category="alcohol">
+                <span>Gin</span><span class="price">8.00</span>
+            </div>
+            <div class="menu-item" data-category="alcohol">
+                <span>Jagermaister</span><span class="price">12.00</span>
+            </div>
+            <div class="menu-item" data-category="alcohol">
+                <span>Martini</span><span class="price">15.00</span>
+            </div>
+            <div class="menu-item" data-category="alcohol">
+                <span>Baylis</span><span class="price">12.00</span>
+            </div>
+            <div class="menu-item" data-category="alcohol">
+                <span>Kahlua</span><span class="price">12.00</span>
+            </div>
+            <div class="menu-item" data-category="alcohol">
+                <span>Stroh 80</span><span class="price">17.00</span>
+            </div>
+            <!-- Snacks Header -->
+            <div class="menu-header" data-category="snacks">
+                <span>SNACKS</span>
+            </div>
+            <!-- Snacks List -->
+            <div class="menu-item" data-category="snacks">
+                <span>Pringles</span><span class="price">15.00</span>
+            </div>
+            <div class="menu-item" data-category="snacks">
+                <span>Lays</span><span class="price">10.00</span>
+            </div>
+            <div class="menu-item" data-category="snacks">
+                <span>Doritos</span><span class="price">10.00</span>
+            </div>
+            <div class="menu-item" data-category="snacks">
+                <span>Nuts with Salt</span><span class="price">7.00</span>
+            </div>
+            <div class="menu-item" data-category="snacks">
+                <span>Pistachio</span><span class="price">12.00</span>
+            </div>
+            <!-- Desserts Header -->
+            <div class="menu-header" data-category="snacks">
+                <span>DESSERTS</span>
+            </div>
+            <!-- Desserts List -->
+            <div class="menu-item" data-category="snacks">
+                <span>Sour Cream Cake</span><span class="price">7.00</span>
+            </div>
+            <div class="menu-item" data-category="snacks">
+                <span>Dessert Truffle</span><span class="price">10.00</span>
+            </div>
+            <div class="menu-item" data-category="snacks">
+                <span>Tiramisu</span><span class="price">10.00</span>
+            </div>
+            <div class="menu-item" data-category="snacks">
+                <span>Baklava</span><span class="price">6.00</span>
+            </div>
+            <div class="menu-item" data-category="snacks">
+                <span>Banana Fruit Tart</span><span class="price">10.00</span>
+            </div>
+            <div class="menu-item" data-category="snacks">
+                <span>Ice Cream</span><span class="price">7.00</span>
             </div>
         </section>
     </div>
@@ -83,7 +468,7 @@
         }
 
         function filterMenu() {
-            const items = document.querySelectorAll('.menu-item');
+            const items = document.querySelectorAll('.menu-item, .menu-header');
             if (activeFilters.size === 0) {
                 items.forEach(item => item.style.display = 'flex');
                 return;
@@ -91,7 +476,7 @@
 
             items.forEach(item => {
                 const itemCategory = item.getAttribute('data-category');
-                if (activeFilters.has(itemCategory)) {
+                if (activeFilters.has(itemCategory) || (itemCategory === 'tea' && activeFilters.has('coffee'))) {
                     item.style.display = 'flex';
                 } else {
                     item.style.display = 'none';
