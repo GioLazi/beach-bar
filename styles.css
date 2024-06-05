@@ -129,3 +129,8 @@ nav {
 .menu-header {
     font-weight: bold;
 }
+.image-container img {
+    width: 350px; /* Укажите нужную ширину */
+    height: auto; /* Высота будет автоматически корректироваться пропорционально ширине */
+    margin-bottom: 10PX;
+}
