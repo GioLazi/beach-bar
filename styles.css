@@ -98,7 +98,8 @@ nav {
 .menu h2 {
     color: #00bfa5;
     font-size: 20px;
-    margin: 0 0 10px 0;
+    margin-top: 10px; /* Отступ сверху */
+    margin-bottom: 10px; /* Отступ снизу */
 }
 
 .menu {
@@ -126,12 +127,15 @@ nav {
 .icecream {
     color: #00bfa5;
 }
+
 .menu-header {
     font-weight: bold;
+    margin-top: 10px; /* Отступ сверху для заголовка */
 }
+
 .image-container img {
     width: 350px; /* Укажите нужную ширину */
     height: 200px; /* Высота будет автоматически корректироваться пропорционально ширине */
-    margin-bottom: 20PX;
+    margin-bottom: 20px;
     border-radius: 6px;
 }
