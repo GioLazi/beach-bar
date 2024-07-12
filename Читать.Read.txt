@@ -1,0 +1,7 @@
+Запуск на языке системы.
+При первом запуске в любой новой директории не 
+забудьте назначить папку для сохранения файла. 
+
+Launch in the system language.
+When you first start in any new directory, do 
+not forget to assign a folder to save the file.
