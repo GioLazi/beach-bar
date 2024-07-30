@@ -21,12 +21,39 @@
         }
         .language-buttons {
             margin: 10px 0;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
         }
         .language-buttons button {
-            margin-right: 5px;
+            background: linear-gradient(45deg, #4CAF50, #2E7D32);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.3s;
+            min-width: 100px; /* Ensure buttons have a minimum width */
+        }
+        .language-buttons button:hover {
+            transform: scale(1.05);
+            background: linear-gradient(45deg, #2E7D32, #4CAF50);
+        }
+        .language-buttons button.active {
+            background: linear-gradient(45deg, #66BB6A, #43A047);
+            transform: scale(1.1);
         }
         .price:before {
             content: "₾ ";
+        }
+
+        @media (max-width: 600px) {
+            .language-buttons button {
+                font-size: 14px;
+                padding: 8px 15px;
+            }
         }
     </style>
 </head>
