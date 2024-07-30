@@ -35,7 +35,7 @@
             border-radius: 30px;
             cursor: pointer;
             transition: transform 0.2s, background 0.3s;
-            min-width: 100px; /* Ensure buttons have a minimum width */
+            min-width: 100px;
         }
         .language-buttons button:hover {
             transform: scale(1.05);
@@ -48,12 +48,26 @@
         .price:before {
             content: "₾ ";
         }
-
         @media (max-width: 600px) {
             .language-buttons button {
                 font-size: 14px;
                 padding: 8px 15px;
             }
+        }
+        .banner {
+            background: linear-gradient(45deg, #80d0b5, #009688);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-family: 'Arial', sans-serif;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .banner h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -62,9 +76,16 @@
         <header>
             <img src="logo.svg" alt="Paulaner Beach Bar" class="header-logo">
         </header>
-        <header>
-            <img src="trip.png" alt="Paulaner Beach Bar" class="header-logo" onclick="window.open('https://#');" style="cursor: pointer;">
-        </header>
+
+        <!-- New Banner -->
+        <a href="https://tripbox.ge" target="_blank" class="banner-link">
+            <div class="banner">
+                <h1 data-en="Tripbox.ge - Car Rental in Georgia!" data-ru="Tripbox.ge - Прокат Авто в Грузии!">Tripbox.ge - Car Rental in Georgia!</h1>
+            </div>
+        </a>
+        
+        
+
         
         <nav>
             <button class="filter-button" onclick="toggleFilter(this, 'all')" data-en="ALL" data-ru="ВСЕ">ALL</button>

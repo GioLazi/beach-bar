@@ -169,3 +169,11 @@ nav {
     background: linear-gradient(45deg, #66BB6A, #43A047);
     transform: scale(1.1);
 }
+
+.banner-link {
+    text-decoration: none;
+}
+
+.banner-link:hover, .banner-link:focus {
+    outline: none;
+}
