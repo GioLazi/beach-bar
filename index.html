@@ -19,12 +19,6 @@
             max-width: 100%;
             height: auto;
         }
-        .language-buttons {
-            margin: 10px 0;
-        }
-        .language-buttons button {
-            margin-right: 5px;
-        }
     </style>
 </head>
 <body>
@@ -37,489 +31,487 @@
         </header>
         
         <nav>
-            <button class="filter-button" onclick="toggleFilter(this, 'all')" data-en="ALL" data-ru="ВСЕ">ALL</button>
-            <button class="filter-button" onclick="toggleFilter(this, 'soft-drinks')" data-en="Soft drinks" data-ru="Безалкогольные напитки">Soft drinks</button>
-            <button class="filter-button" onclick="toggleFilter(this, 'cocktails')" data-en="Cocktails" data-ru="Коктейли">Cocktails</button>
-            <button class="filter-button" onclick="toggleFilter(this, 'wine')" data-en="Wine" data-ru="Вино">Wine</button>
-            <button class="filter-button" onclick="toggleFilter(this, 'beer')" data-en="Beer" data-ru="Пиво">Beer</button>
-            <button class="filter-button" onclick="toggleFilter(this, 'alcohol')" data-en="Alcohol" data-ru="Алкоголь">Alcohol</button>
-            <button class="filter-button" onclick="toggleFilter(this, 'coffee')" data-en="Coffee & Tea" data-ru="Кофе и Чай">Coffee & Tea</button>
-            <button class="filter-button" onclick="toggleFilter(this, 'snacks')" data-en="Snacks & Desserts" data-ru="Закуски и Десерты">Snacks & Desserts</button>
+            <button class="filter-button" onclick="toggleFilter(this, 'all')" data-i18n="filter.all">ALL</button>
+            <button class="filter-button" onclick="toggleFilter(this, 'soft-drinks')" data-i18n="filter.soft_drinks">Soft drinks</button>
+            <button class="filter-button" onclick="toggleFilter(this, 'cocktails')" data-i18n="filter.cocktails">Cocktails</button>
+            <button class="filter-button" onclick="toggleFilter(this, 'wine')" data-i18n="filter.wine">Wine</button>
+            <button class="filter-button" onclick="toggleFilter(this, 'beer')" data-i18n="filter.beer">Beer</button>
+            <button class="filter-button" onclick="toggleFilter(this, 'alcohol')" data-i18n="filter.alcohol">Alcohol</button>
+            <button class="filter-button" onclick="toggleFilter(this, 'coffee')" data-i18n="filter.coffee">Coffee & Tea</button>
+            <button class="filter-button" onclick="toggleFilter(this, 'snacks')" data-i18n="filter.snacks">Snacks & Desserts</button>
             <button class="filter-button" onclick="toggleFilter(this, 'hookah')">
                 <img src="icons/hookah_5390139.png" alt="Hookah" class="icon">
             </button>
-            <button class="filter-button" onclick="toggleFilter(this, 'food')" data-en="Food" data-ru="Еда">Food</button>
+            <button class="filter-button" onclick="toggleFilter(this, 'food')" data-i18n="filter.food">Food</button>
         </nav>
-        <div class="language-buttons">
-            <button onclick="setLanguage('en')">English</button>
-            <button onclick="setLanguage('ru')">Русский</button>
-        </div>
         <div class="image-container" id="filter-image">
             <img src="" alt="" id="filter-image-src">
         </div>
         <section class="menu">
             <!-- Wine Header -->
-            <div class="menu-header" data-category="wine" data-en="WINE" data-ru="ВИНО">
+            <div class="menu-header" data-category="wine">
                 <span>WINE</span>
             </div>
             <!-- Red Dry -->
-            <div class="menu-header" data-category="wine" data-en="RED DRY" data-ru="КРАСНОЕ СУХОЕ">
+            <div class="menu-header" data-category="wine">
                 <span>RED DRY</span>
             </div>
-            <div class="menu-item" data-category="wine" data-en="Saperavi (glass/bottle)" data-ru="Саперави (бокал/бутылка)">
+            <div class="menu-item" data-category="wine">
                 <span>Saperavi (glass/bottle)</span><span class="price">15/45</span>
             </div>
-            <div class="menu-item" data-category="wine" data-en="Mukuzani (glass/bottle)" data-ru="Мукузани (бокал/бутылка)">
+            <div class="menu-item" data-category="wine">
                 <span>Mukuzani (glass/bottle)</span><span class="price">20/60</span>
             </div>
             <!-- Red Semi Sweet -->
-            <div class="menu-header" data-category="wine" data-en="RED SEMI SWEET" data-ru="КРАСНОЕ ПОЛУСЛАДКОЕ">
+            <div class="menu-header" data-category="wine">
                 <span>RED SEMI SWEET</span>
             </div>
-            <div class="menu-item" data-category="wine" data-en="Kindzmarauli (glass/bottle)" data-ru="Киндзмараули (бокал/бутылка)">
+            <div class="menu-item" data-category="wine">
                 <span>Kindzmarauli (glass/bottle)</span><span class="price">20/65</span>
             </div>
-            <div class="menu-item" data-category="wine" data-en="Khvanchkara (glass/bottle)" data-ru="Хванчкара (бокал/бутылка)">
+            <div class="menu-item" data-category="wine">
                 <span>Khvanchkara (glass/bottle)</span><span class="price">25/85</span>
             </div>
             <!-- White Dry -->
-            <div class="menu-header" data-category="wine" data-en="WHITE DRY" data-ru="БЕЛОЕ СУХОЕ">
+            <div class="menu-header" data-category="wine">
                 <span>WHITE DRY</span>
             </div>
-            <div class="menu-item" data-category="wine" data-en="Mtsvane Kisi (glass/bottle)" data-ru="Мцване Киси (бокал/бутылка)">
+            <div class="menu-item" data-category="wine">
                 <span>Mtsvane Kisi (glass/bottle)</span><span class="price">15/50</span>
             </div>
-            <div class="menu-item" data-category="wine" data-en="Tsinandali (glass/bottle)" data-ru="Цинандали (бокал/бутылка)">
+            <div class="menu-item" data-category="wine">
                 <span>Tsinandali (glass/bottle)</span><span class="price">12/40</span>
             </div>
-            <div class="menu-item" data-category="wine" data-en="Colikauri (glass/bottle)" data-ru="Цоликаури (бокал/бутылка)">
+            <div class="menu-item" data-category="wine">
                 <span>Colikauri (glass/bottle)</span><span class="price">12/40</span>
             </div>
             <!-- White Semi Sweet -->
-            <div class="menu-header" data-category="wine" data-en="WHITE SEMI SWEET" data-ru="БЕЛОЕ ПОЛУСЛАДКОЕ">
+            <div class="menu-header" data-category="wine">
                 <span>WHITE SEMI SWEET</span>
             </div>
-            <div class="menu-item" data-category="wine" data-en="Tvishi (glass/bottle)" data-ru="Твиши (бокал/бутылка)">
+            <div class="menu-item" data-category="wine">
                 <span>Tvishi (glass/bottle)</span><span class="price">15/60</span>
             </div>
             <!-- Rose -->
-            <div class="menu-header" data-category="wine" data-en="ROSE" data-ru="РОЗОВОЕ ВИНО">
+            <div class="menu-header" data-category="wine">
                 <span>ROSE</span>
             </div>
-            <div class="menu-item" data-category="wine" data-en="Pirosmani Semi Sweet (glass/bottle)" data-ru="Пиросмани Полусладкое (бокал/бутылка)">
+            <div class="menu-item" data-category="wine">
                 <span>Pirosmani Semi Sweet (glass/bottle)</span><span class="price">15/50</span>
             </div>
-            <div class="menu-item" data-category="wine" data-en="Saperavi Dry (glass/bottle)" data-ru="Саперави Сухое (бокал/бутылка)">
+            <div class="menu-item" data-category="wine">
                 <span>Saperavi Dry (glass/bottle)</span><span class="price">15/50</span>
             </div>
             <!-- Sparkling Wine -->
-            <div class="menu-header" data-category="wine" data-en="SPARKLING WINE" data-ru="ИГРИСТОЕ ВИНО">
+            <div class="menu-header" data-category="wine">
                 <span>SPARKLING WINE</span>
             </div>
-            <div class="menu-item" data-category="wine" data-en="Tetri Brut (glass/bottle)" data-ru="Тетри Брют (бокал/бутылка)">
+            <div class="menu-item" data-category="wine">
                 <span>Tetri Brut (glass/bottle)</span><span class="price">15/50</span>
             </div>
-            <div class="menu-item" data-category="wine" data-en="Roze Brut (glass/bottle)" data-ru="Розе Брют (бокал/бутылка)">
+            <div class="menu-item" data-category="wine">
                 <span>Roze Brut (glass/bottle)</span><span class="price">15/50</span>
             </div>
             <!-- Draft Beer Header -->
-            <div class="menu-header" data-category="beer" data-en="DRAFT BEER" data-ru="РАЗЛИВНОЕ ПИВО">
+            <div class="menu-header" data-category="beer">
                 <span>DRAFT BEER</span>
             </div>
             <!-- Draft Beer List -->
-            <div class="menu-item" data-category="beer" data-en="Paulaner Unfiltered" data-ru="Пауланер Нефильтрованное">
+            <div class="menu-item" data-category="beer">
                 <span>Paulaner Unfiltered</span><span class="price">15.00</span>
             </div>
-            <div class="menu-item" data-category="beer" data-en="Pilsner" data-ru="Пилснер">
+            <div class="menu-item" data-category="beer">
                 <span>Pilsner</span><span class="price">15.00</span>
             </div>
-            <div class="menu-item" data-category="beer" data-en="Staropilsen 10" data-ru="Старопилсен 10">
+            <div class="menu-item" data-category="beer">
                 <span>Staropilsen 10</span><span class="price">10.00</span>
             </div>
-            <div class="menu-item" data-category="beer" data-en="Lazika (Georgian Beer)" data-ru="Лазика (Грузинское Пиво)">
+            <div class="menu-item" data-category="beer">
                 <span>Lazika (Georgian Beer)</span><span class="price">7.00</span>
             </div>
             <!-- Paulaner Header -->
-            <div class="menu-header" data-category="beer" data-en="PAULANER" data-ru="ПАУЛАНЕР">
+            <div class="menu-header" data-category="beer">
                 <span>PAULANER</span>
             </div>
             <!-- Paulaner Beer List -->
-            <div class="menu-item" data-category="beer" data-en="Unfiltered Can/Bottle" data-ru="Нефильтрованное Банка/Бутылка">
+            <div class="menu-item" data-category="beer">
                 <span>Unfiltered Can/Bottle</span><span class="price">15.00</span>
             </div>
-            <div class="menu-item" data-category="beer" data-en="FC Bayern Unfiltered Can/Bottle" data-ru="ФК Бавария Нефильтрованное Банка/Бутылка">
+            <div class="menu-item" data-category="beer">
                 <span>FC Bayern Unfiltered Can/Bottle</span><span class="price">15.00</span>
             </div>
-            <div class="menu-item" data-category="beer" data-en="Munich Can/Bottle" data-ru="Мюнхен Банка/Бутылка">
+            <div class="menu-item" data-category="beer">
                 <span>Munich Can/Bottle</span><span class="price">15.00</span>
             </div>
-            <div class="menu-item" data-category="beer" data-en="Lemon Radler 2.5% Can/Bottle" data-ru="Лимонный Радлер 2.5% Банка/Бутылка">
+            <div class="menu-item" data-category="beer">
                 <span>Lemon Radler 2.5% Can/Bottle</span><span class="price">15.00</span>
             </div>
-            <div class="menu-item" data-category="beer" data-en="Grapefruit Rose 2.5% Can/Bottle" data-ru="Грейпфрутовый Розовый 2.5% Банка/Бутылка">
+            <div class="menu-item" data-category="beer">
                 <span>Grapefruit Rose 2.5% Can/Bottle</span><span class="price">15.00</span>
             </div>
-            <div class="menu-item" data-category="beer" data-en="Unfiltered Dark Can/Bottle" data-ru="Нефильтрованное Тёмное Банка/Бутылка">
+            <div class="menu-item" data-category="beer">
                 <span>Unfiltered Dark Can/Bottle</span><span class="price">15.00</span>
             </div>
-            <div class="menu-item" data-category="beer" data-en="Non-Alcoholic" data-ru="Безалкогольное">
+            <div class="menu-item" data-category="beer">
                 <span>Non-Alcoholic</span><span class="price">15.00</span>
             </div>
             <!-- Weihenstephaner Header -->
-            <div class="menu-header" data-category="beer" data-en="WEIHENSTEPHANER" data-ru="ВАЙЕНШТЕФАН">
+            <div class="menu-header" data-category="beer">
                 <span>WEIHENSTEPHANER</span>
             </div>
             <!-- Weihenstephaner Beer List -->
-            <div class="menu-item" data-category="beer" data-en="Original" data-ru="Оригинальное">
+            <div class="menu-item" data-category="beer">
                 <span>Original</span><span class="price">15.00</span>
             </div>
-            <div class="menu-item" data-category="beer" data-en="Weissbier" data-ru="Вайсбир">
+            <div class="menu-item" data-category="beer">
                 <span>Weissbier</span><span class="price">15.00</span>
             </div>
             <!-- Hacker-Pschorr Header -->
-            <div class="menu-header" data-category="beer" data-en="HACKER-PSCHORR" data-ru="ХАКЕР-ПШОРР">
+            <div class="menu-header" data-category="beer">
                 <span>HACKER-PSCHORR</span>
             </div>
             <!-- Hacker-Pschorr Beer List -->
-            <div class="menu-item" data-category="beer" data-en="Unfiltered Can" data-ru="Нефильтрованное Банка">
+            <div class="menu-item" data-category="beer">
                 <span>Unfiltered Can</span><span class="price">15.00</span>
             </div>
-            <div class="menu-item" data-category="beer" data-en="Gold" data-ru="Золотое">
+            <div class="menu-item" data-category="beer">
                 <span>Gold</span><span class="price">15.00</span>
             </div>
             <!-- Coffee Header -->
-            <div class="menu-header" data-category="coffee" data-en="COFFEE" data-ru="КОФЕ">
+            <div class="menu-header" data-category="coffee">
                 <span>COFFEE</span>
             </div>
             <!-- New Coffee List -->
-            <div class="menu-item" data-category="coffee" data-en="Espresso" data-ru="Эспрессо">
+            <div class="menu-item" data-category="coffee">
                 <span>Espresso</span><span class="price">5.00</span>
             </div>
-            <div class="menu-item" data-category="coffee" data-en="Americano" data-ru="Американо">
+            <div class="menu-item" data-category="coffee">
                 <span>Americano</span><span class="price">6.00</span>
             </div>
-            <div class="menu-item" data-category="coffee" data-en="Cappuccino" data-ru="Капучино">
+            <div class="menu-item" data-category="coffee">
                 <span>Cappuccino</span><span class="price">7.00</span>
             </div>
-            <div class="menu-item" data-category="coffee" data-en="Latte" data-ru="Латте">
+            <div class="menu-item" data-category="coffee">
                 <span>Latte</span><span class="price">10.00</span>
             </div>
-            <div class="menu-item" data-category="coffee" data-en="Iced Coffee" data-ru="Холодный Кофе">
+            <div class="menu-item" data-category="coffee">
                 <span>Iced Coffee</span><span class="price">10.00</span>
             </div>
-            <div class="menu-item" data-category="coffee" data-en="Iced Coffee with Milk" data-ru="Холодный Кофе с Молоком">
+            <div class="menu-item" data-category="coffee">
                 <span>Iced Coffee with Milk</span><span class="price">12.00</span>
             </div>
-            <div class="menu-item" data-category="coffee" data-en="Iced Coffee with Ice Cream" data-ru="Холодный Кофе с Мороженым">
+            <div class="menu-item" data-category="coffee">
                 <span>Iced Coffee with Ice Cream</span><span class="price">15.00</span>
             </div>
-            <div class="menu-item" data-category="coffee" data-en="Batumi Coffee" data-ru="Батумский Кофе">
+            <div class="menu-item" data-category="coffee">
                 <span>Batumi Coffee</span><span class="price">4.00</span>
             </div>
             <!-- Tea Header -->
-            <div class="menu-header" data-category="tea" data-en="TEA" data-ru="ЧАЙ">
+            <div class="menu-header" data-category="tea">
                 <span>TEA</span>
             </div>
             <!-- Tea List -->
-            <div class="menu-item" data-category="tea" data-en="Raspberries" data-ru="Малина">
+            <div class="menu-item" data-category="tea">
                 <span>Raspberries</span><span class="price">10.00</span>
             </div>
-            <div class="menu-item" data-category="tea" data-en="Black" data-ru="Чёрный">
+            <div class="menu-item" data-category="tea">
                 <span>Black</span><span class="price">10.00</span>
             </div>
-            <div class="menu-item" data-category="tea" data-en="Green" data-ru="Зелёный">
+            <div class="menu-item" data-category="tea">
                 <span>Green</span><span class="price">10.00</span>
             </div>
-            <div class="menu-item" data-category="tea" data-en="Chamomile" data-ru="Ромашковый">
+            <div class="menu-item" data-category="tea">
                 <span>Chamomile</span><span class="price">10.00</span>
             </div>
             <!-- Soft Drinks Header -->
-            <div class="menu-header" data-category="soft-drinks" data-en="SOFT DRINKS" data-ru="БЕЗАЛКОГОЛЬНЫЕ НАПИТКИ">
+            <div class="menu-header" data-category="soft-drinks">
                 <span>SOFT DRINKS</span>
             </div>
             <!-- Soft Drinks List -->
-            <div class="menu-item" data-category="soft-drinks" data-en="Cola/Sprite/Fanta" data-ru="Кола/Спрайт/Фанта">
+            <div class="menu-item" data-category="soft-drinks">
                 <span>Cola/Sprite/Fanta</span><span class="price">5.00</span>
             </div>
-            <div class="menu-item" data-category="soft-drinks" data-en="Juice" data-ru="Сок">
+            <div class="menu-item" data-category="soft-drinks">
                 <span>Juice</span><span class="price">5.00</span>
             </div>
-            <div class="menu-item" data-category="soft-drinks" data-en="Cold Tea" data-ru="Холодный Чай">
+            <div class="menu-item" data-category="soft-drinks">
                 <span>Cold Tea</span><span class="price">5.00</span>
             </div>
-            <div class="menu-item" data-category="soft-drinks" data-en="Rad Rain" data-ru="Рад Рейн">
+            <div class="menu-item" data-category="soft-drinks">
                 <span>Rad Rain</span><span class="price">8.00</span>
             </div>
-            <div class="menu-item" data-category="soft-drinks" data-en="Red Bull" data-ru="Ред Булл">
+            <div class="menu-item" data-category="soft-drinks">
                 <span>Red Bull</span><span class="price">12.00</span>
             </div>
-            <div class="menu-item" data-category="soft-drinks" data-en="Borjomi" data-ru="Боржоми">
+            <div class="menu-item" data-category="soft-drinks">
                 <span>Borjomi</span><span class="price">4.00</span>
             </div>
-            <div class="menu-item" data-category="soft-drinks" data-en="Water" data-ru="Вода">
+            <div class="menu-item" data-category="soft-drinks">
                 <span>Water</span><span class="price">2.00</span>
             </div>
-            <div class="menu-item" data-category="soft-drinks" data-en="Lemonade 0.33" data-ru="Лимонад 0.33">
+            <div class="menu-item" data-category="soft-drinks">
                 <span>Lemonade 0.33</span><span class="price">5.00</span>
             </div>
-            <div class="menu-item" data-category="soft-drinks" data-en="Cappy" data-ru="Каппи">
+            <div class="menu-item" data-category="soft-drinks">
                 <span>Cappy</span><span class="price">5.00</span>
             </div>
             <!-- Fresh Juice Header -->
-            <div class="menu-header" data-category="soft-drinks" data-en="FRESH JUICE" data-ru="СВЕЖЕВЫЖАТЫЙ СОК">
+            <div class="menu-header" data-category="soft-drinks">
                 <span>FRESH JUICE</span>
             </div>
             <!-- Fresh Juice List -->
-            <div class="menu-item" data-category="soft-drinks" data-en="Orange" data-ru="Апельсиновый">
+            <div class="menu-item" data-category="soft-drinks">
                 <span>Orange</span><span class="price">15.00</span>
             </div>
-            <div class="menu-item" data-category="soft-drinks" data-en="Pomegranate" data-ru="Гранатовый">
+            <div class="menu-item" data-category="soft-drinks">
                 <span>Pomegranate</span><span class="price">15.00</span>
             </div>
-            <div class="menu-item" data-category="soft-drinks" data-en="Grapefruit" data-ru="Грейпфрутовый">
+            <div class="menu-item" data-category="soft-drinks">
                 <span>Grapefruit</span><span class="price">15.00</span>
             </div>
             <!-- Cocktails Header -->
-            <div class="menu-header" data-category="cocktails" data-en="ALCOHOL FREE" data-ru="БЕЗАЛКОГОЛЬНЫЕ КОКТЕЙЛИ">
+            <div class="menu-header" data-category="cocktails">
                 <span>ALCOHOL FREE</span>
             </div>
             <!-- Alcohol Free Cocktails -->
-            <div class="menu-item" data-category="cocktails" data-en="Mojito Lemonade" data-ru="Мохито Лимонад">
+            <div class="menu-item" data-category="cocktails">
                 <span>Mojito Lemonade</span><span class="price">15.00</span>
             </div>
-            <div class="menu-item" data-category="cocktails" data-en="Banana Lemonade" data-ru="Банановый Лимонад">
+            <div class="menu-item" data-category="cocktails">
                 <span>Banana Lemonade</span><span class="price">15.00</span>
             </div>
-            <div class="menu-item" data-category="cocktails" data-en="Pomegranate Lemonade" data-ru="Гранатовый Лимонад">
+            <div class="menu-item" data-category="cocktails">
                 <span>Pomegranate Lemonade</span><span class="price">15.00</span>
             </div>
-            <div class="menu-item" data-category="cocktails" data-en="Raspberry Mojito" data-ru="Малиновый Мохито">
+            <div class="menu-item" data-category="cocktails">
                 <span>Raspberry Mojito</span><span class="price">17.00</span>
             </div>
-            <div class="menu-item" data-category="cocktails" data-en="Milkshake" data-ru="Молочный Коктейль">
+            <div class="menu-item" data-category="cocktails">
                 <span>Milkshake</span><span class="price">15.00</span>
             </div>
             <!-- Alcohol Cocktails Header -->
-            <div class="menu-header" data-category="cocktails" data-en="ALCOHOL COCKTAILS" data-ru="АЛКОГОЛЬНЫЕ КОКТЕЙЛИ">
+            <div class="menu-header" data-category="cocktails">
                 <span>ALCOHOL COCKTAILS</span>
             </div>
             <!-- Added Cocktails -->
-            <div class="menu-item" data-category="cocktails" data-en="Baileys Beach" data-ru="Бейлис Бич">
+            <div class="menu-item" data-category="cocktails">
                 <span>Baileys Beach</span><span class="price">30.00</span>
             </div>
-            <div class="menu-item" data-category="cocktails" data-en="Pina Colada" data-ru="Пина Колада">
+            <div class="menu-item" data-category="cocktails">
                 <span>Pina Colada</span><span class="price">25.00</span>
             </div>
-            <div class="menu-item" data-category="cocktails" data-en="Blue Lagoon" data-ru="Голубая Лагуна">
+            <div class="menu-item" data-category="cocktails">
                 <span>Blue Lagoon</span><span class="price">25.00</span>
             </div>
-            <div class="menu-item" data-category="cocktails" data-en="Aperol Spritz" data-ru="Апероль Спритц">
+            <div class="menu-item" data-category="cocktails">
                 <span>Aperol Spritz</span><span class="price">25.00</span>
             </div>
-            <div class="menu-item" data-category="cocktails" data-en="Classic Mojito" data-ru="Классический Мохито">
+            <div class="menu-item" data-category="cocktails">
                 <span>Classic Mojito</span><span class="price">25.00</span>
             </div>
-            <div class="menu-item" data-category="cocktails" data-en="Raspberry Mojito" data-ru="Малиновый Мохито">
+            <div class="menu-item" data-category="cocktails">
                 <span>Raspberry Mojito</span><span class="price">25.00</span>
             </div>
-            <div class="menu-item" data-category="cocktails" data-en="Long Island Iced Tea" data-ru="Лонг Айленд Айс Ти">
+            <div class="menu-item" data-category="cocktails">
                 <span>Long Island Iced Tea</span><span class="price">25.00</span>
             </div>
-            <div class="menu-item" data-category="cocktails" data-en="Long Island Energy" data-ru="Лонг Айленд Энерджи">
+            <div class="menu-item" data-category="cocktails">
                 <span>Long Island Energy</span><span class="price">30.00</span>
             </div>
-            <div class="menu-item" data-category="cocktails" data-en="Sex on the Beach" data-ru="Секс на Пляже">
+            <div class="menu-item" data-category="cocktails">
                 <span>Sex on the Beach</span><span class="price">25.00</span>
             </div>
-            <div class="menu-item" data-category="cocktails" data-en="Gin Tonic" data-ru="Джин Тоник">
+            <div class="menu-item" data-category="cocktails">
                 <span>Gin Tonic</span><span class="price">25.00</span>
             </div>
-            <div class="menu-item" data-category="cocktails" data-en="Cuba Libre" data-ru="Куба Либре">
+            <div class="menu-item" data-category="cocktails">
                 <span>Cuba Libre</span><span class="price">25.00</span>
             </div>
-            <div class="menu-item" data-category="cocktails" data-en="Tequila Boom" data-ru="Текила Бум">
+            <div class="menu-item" data-category="cocktails">
                 <span>Tequila Boom</span><span class="price">20.00</span>
             </div>
-            <div class="menu-item" data-category="cocktails" data-en="Maitai" data-ru="Майтай">
+            <div class="menu-item" data-category="cocktails">
                 <span>Maitai</span><span class="price">25.00</span>
             </div>
             <!-- Shooters Header -->
-            <div class="menu-header" data-category="shooters" data-en="SHOOTERS" data-ru="ШУТЕРЫ">
+            <div class="menu-header" data-category="shooters">
                 <span>SHOOTERS</span>
             </div>
             <!-- Shooters -->
-            <div class="menu-item" data-category="shooters" data-en="Green Mexican" data-ru="Зелёный Мексиканец">
+            <div class="menu-item" data-category="shooters">
                 <span>Green Mexican</span><span class="price">12.00</span>
             </div>
-            <div class="menu-item" data-category="shooters" data-en="B52" data-ru="B52">
+            <div class="menu-item" data-category="shooters">
                 <span>B52</span><span class="price">10.00</span>
             </div>
             <!-- Hookah Header -->
-            <div class="menu-header" data-category="hookah" data-en="HOOKAH" data-ru="КАЛЬЯН">
+            <div class="menu-header" data-category="hookah">
                 <span>HOOKAH</span>
             </div>
             <!-- Hookah List -->
-            <div class="menu-item" data-category="hookah" data-en="Darkside / Musthave" data-ru="Darkside / Musthave">
+            <div class="menu-item" data-category="hookah">
                 <span>Darkside / Musthave</span><span class="price">90.00</span>
             </div>
-            <div class="menu-item" data-category="hookah" data-en="Brusko" data-ru="Brusko">
+            <div class="menu-item" data-category="hookah">
                 <span>Brusko</span><span class="price">80.00</span>
             </div>
-            <div class="menu-item" data-category="hookah" data-en="Smogmoon" data-ru="Smogmoon">
+            <div class="menu-item" data-category="hookah">
                 <span>Smogmoon</span><span class="price">70.00</span>
             </div>
             <!-- Alcohol Header -->
-            <div class="menu-header" data-category="alcohol" data-en="ALCOHOL" data-ru="АЛКОГОЛЬ">
+            <div class="menu-header" data-category="alcohol">
                 <span>ALCOHOL</span>
             </div>
             <!-- Alcohol List -->
-            <div class="menu-item" data-category="alcohol" data-en="Tequila" data-ru="Текила">
+            <div class="menu-item" data-category="alcohol">
                 <span>Tequila</span><span class="price">12.00</span>
             </div>
-            <div class="menu-item" data-category="alcohol" data-en="Vodka Absolut" data-ru="Водка Absolut">
+            <div class="menu-item" data-category="alcohol">
                 <span>Vodka Absolut</span><span class="price">8.00</span>
             </div>
-            <div class="menu-item" data-category="alcohol" data-en="Nemiroff" data-ru="Nemiroff">
+            <div class="menu-item" data-category="alcohol">
                 <span>Nemiroff</span><span class="price">6.00</span>
             </div>
-            <div class="menu-item" data-category="alcohol" data-en="Chacha" data-ru="Чача">
+            <div class="menu-item" data-category="alcohol">
                 <span>Chacha</span><span class="price">7.00</span>
             </div>
-            <div class="menu-item" data-category="alcohol" data-en="Hennessy" data-ru="Hennessy">
+            <div class="menu-item" data-category="alcohol">
                 <span>Hennessy</span><span class="price">15.00</span>
             </div>
-            <div class="menu-item" data-category="alcohol" data-en="Sarajishvili (Georgian Cognac)" data-ru="Сараджишвили (Грузинский Коньяк)">
+            <div class="menu-item" data-category="alcohol">
                 <span>Sarajishvili (Georgian Cognac)</span><span class="price">10.00</span>
             </div>
-            <div class="menu-item" data-category="alcohol" data-en="Jack Daniels" data-ru="Джек Дэниэлс">
+            <div class="menu-item" data-category="alcohol">
                 <span>Jack Daniels</span><span class="price">12.00</span>
             </div>
-            <div class="menu-item" data-category="alcohol" data-en="Chivas 12" data-ru="Чивас 12">
+            <div class="menu-item" data-category="alcohol">
                 <span>Chivas 12</span><span class="price">20.00</span>
             </div>
-            <div class="menu-item" data-category="alcohol" data-en="Jameson" data-ru="Джеймсон">
+            <div class="menu-item" data-category="alcohol">
                 <span>Jameson</span><span class="price">12.00</span>
             </div>
-            <div class="menu-item" data-category="alcohol" data-en="Jim Beam" data-ru="Джим Бим">
+            <div class="menu-item" data-category="alcohol">
                 <span>Jim Beam</span><span class="price">12.00</span>
             </div>
-            <div class="menu-item" data-category="alcohol" data-en="Rum Black / White" data-ru="Ром Черный / Белый">
+            <div class="menu-item" data-category="alcohol">
                 <span>Rum Black / White</span><span class="price">10.00</span>
             </div>
-            <div class="menu-item" data-category="alcohol" data-en="Gin" data-ru="Джин">
+            <div class="menu-item" data-category="alcohol">
                 <span>Gin</span><span class="price">8.00</span>
             </div>
-            <div class="menu-item" data-category="alcohol" data-en="Jagermaister" data-ru="Егермейстер">
+            <div class="menu-item" data-category="alcohol">
                 <span>Jagermaister</span><span class="price">12.00</span>
             </div>
-            <div class="menu-item" data-category="alcohol" data-en="Martini" data-ru="Мартини">
+            <div class="menu-item" data-category="alcohol">
                 <span>Martini</span><span class="price">15.00</span>
             </div>
-            <div class="menu-item" data-category="alcohol" data-en="Baylis" data-ru="Бейлис">
+            <div class="menu-item" data-category="alcohol">
                 <span>Baylis</span><span class="price">12.00</span>
             </div>
-            <div class="menu-item" data-category="alcohol" data-en="Kahlua" data-ru="Калуа">
+            <div class="menu-item" data-category="alcohol">
                 <span>Kahlua</span><span class="price">12.00</span>
             </div>
-            <div class="menu-item" data-category="alcohol" data-en="Stroh 80" data-ru="Штро 80">
+            <div class="menu-item" data-category="alcohol">
                 <span>Stroh 80</span><span class="price">17.00</span>
             </div>
             <!-- Snacks Header -->
-            <div class="menu-header" data-category="snacks" data-en="SNACKS" data-ru="ЗАКУСКИ">
+            <div class="menu-header" data-category="snacks">
                 <span>SNACKS</span>
             </div>
             <!-- Snacks List -->
-            <div class="menu-item" data-category="snacks" data-en="Pringles" data-ru="Принглс">
+            <div class="menu-item" data-category="snacks">
                 <span>Pringles</span><span class="price">15.00</span>
             </div>
-            <div class="menu-item" data-category="snacks" data-en="Lays" data-ru="Лейс">
+            <div class="menu-item" data-category="snacks">
                 <span>Lays</span><span class="price">10.00</span>
             </div>
-            <div class="menu-item" data-category="snacks" data-en="Doritos" data-ru="Доритос">
+            <div class="menu-item" data-category="snacks">
                 <span>Doritos</span><span class="price">10.00</span>
             </div>
-            <div class="menu-item" data-category="snacks" data-en="Nuts with Salt" data-ru="Орехи с Солью">
+            <div class="menu-item" data-category="snacks">
                 <span>Nuts with Salt</span><span class="price">7.00</span>
             </div>
-            <div class="menu-item" data-category="snacks" data-en="Pistachio" data-ru="Фисташки">
+            <div class="menu-item" data-category="snacks">
                 <span>Pistachio</span><span class="price">12.00</span>
             </div>
             <!-- Desserts Header -->
-            <div class="menu-header" data-category="snacks" data-en="DESSERTS" data-ru="ДЕСЕРТЫ">
+            <div class="menu-header" data-category="snacks">
                 <span>DESSERTS</span>
             </div>
-            <!-- Desserts List -->
-            <div class="menu-item" data-category="snacks" data-en="Sour Cream Cake" data-ru="Торт из Сметаны">
+            <!-- Desserts List             <div class="menu-item" data-category="snacks">
                 <span>Sour Cream Cake</span><span class="price">7.00</span>
             </div>
-            <div class="menu-item" data-category="snacks" data-en="Dessert Truffle" data-ru="Десерт Трюфель">
+            <div class="menu-item" data-category="snacks">
                 <span>Dessert Truffle</span><span class="price">10.00</span>
             </div>
-            <div class="menu-item" data-category="snacks" data-en="Tiramisu" data-ru="Тирамису">
+            <div class="menu-item" data-category="snacks">
                 <span>Tiramisu</span><span class="price">10.00</span>
             </div>
-            <div class="menu-item" data-category="snacks" data-en="Baklava" data-ru="Баклава">
+            <div class="menu-item" data-category="snacks">
                 <span>Baklava</span><span class="price">6.00</span>
             </div>
-            <div class="menu-item" data-category="snacks" data-en="Banana Fruit Tart" data-ru="Банановый Фруктовый Тарт">
+            <div class="menu-item" data-category="snacks">
                 <span>Banana Fruit Tart</span><span class="price">10.00</span>
-            </div>
-            <div class="menu-item" data-category="snacks" data-en="Ice Cream" data-ru="Мороженое">
+            </div>-->
+
+            <div class="menu-item" data-category="snacks">
                 <span>Ice Cream</span><span class="price">7.00</span>
             </div>
-            <div class="menu-item" data-category="snacks" data-en="Fruit plate" data-ru="Фруктовая Тарелка">
+            <div class="menu-item" data-category="snacks">
                 <span>Fruit plate</span><span class="price">40.00</span>
             </div>
             <!-- Food Header -->
-            <div class="menu-header" data-category="food" data-en="FOOD" data-ru="ЕДА">
+            
+            <div class="menu-header" data-category="food">
                 <span>FOOD</span>
             </div>
             <!-- Food List -->
-            <div class="menu-item" data-category="food" data-en="HOT DOG" data-ru="ХОТ-ДОГ">
+            <div class="menu-item" data-category="food">
                 <span>HOT DOG</span><span class="price">12.00</span>
             </div>
-            <div class="menu-item" data-category="food" data-en="FRENCH FRIES" data-ru="КАРТОФЕЛЬ ФРИ">
+            <div class="menu-item" data-category="food">
                 <span>FRENCH FRIES</span><span class="price">10.00</span>
             </div>
-            <div class="menu-item" data-category="food" data-en="MEXICAN POTATOES" data-ru="МЕКСИКАНСКИЙ КАРТОФЕЛЬ">
+            <div class="menu-item" data-category="food">
                 <span>MEXICAN POTATOES</span><span class="price">14.00</span>
             </div>
-            <div class="menu-item" data-category="food" data-en="HOMEMADE CHIPS" data-ru="ДОМАШНИЕ ЧИПСЫ">
+            <div class="menu-item" data-category="food">
                 <span>HOMEMADE CHIPS</span><span class="price">12.00</span>
             </div>
-            <div class="menu-item" data-category="food" data-en="Chicken Nuggets" data-ru="Куриные Наггетсы">
+            <div class="menu-item" data-category="food">
                 <span>Chicken Nuggets</span><span class="price">15.00</span>
             </div>
-            <div class="menu-item" data-category="food" data-en="CHEESE CROQUETTES" data-ru="СЫРНЫЕ КРОКЕТЫ">
+            <div class="menu-item" data-category="food">
                 <span>CHEESE CROQUETTES</span><span class="price">15.00</span>
             </div>
-            <div class="menu-item" data-category="food" data-en="CHEESE ROLLS" data-ru="СЫРНЫЕ РУЛЕТЫ">
+            <div class="menu-item" data-category="food">
                 <span>CHEESE ROLLS</span><span class="price">15.00</span>
             </div>
-            <div class="menu-item" data-category="food" data-en="SPINACH ROLLS" data-ru="РУЛЕТЫ СО ШПИНАТОМ">
+            <div class="menu-item" data-category="food">
                 <span>SPINACH ROLLS</span><span class="price">15.00</span>
             </div>
-            <div class="menu-item" data-category="food" data-en="FALAFEL BALLS" data-ru="ШАРЫ ФАЛАФЕЛЯ">
+            <div class="menu-item" data-category="food">
                 <span>FALAFEL BALLS</span><span class="price">17.00</span>
             </div>
-            <div class="menu-item" data-category="food" data-en="CHEESE BALLS" data-ru="СЫРНЫЕ ШАРЫ">
+            <div class="menu-item" data-category="food">
                 <span>CHEESE BALLS</span><span class="price">20.00</span>
             </div>
-            <div class="menu-item" data-category="food" data-en="CRISPY BALLS WITH SPINACH AND CHEESE" data-ru="ХРУСТЯЩИЕ ШАРЫ СО ШПИНАТОМ И СЫРОМ">
+            <div class="menu-item" data-category="food">
                 <span>CRISPY BALLS WITH SPINACH AND CHEESE</span><span class="price">18.00</span>
             </div>
-            <div class="menu-item" data-category="food" data-en="ONION RINGS" data-ru="КОЛЬЦА ЛУКА">
+            <div class="menu-item" data-category="food">
                 <span>ONION RINGS</span><span class="price">15.00</span>
             </div>
-            <div class="menu-item" data-category="food" data-en="Tempura Shrimp" data-ru="Креветки Темпура">
+            <div class="menu-item" data-category="food">
                 <span>Tempura Shrimp</span><span class="price">20.00</span>
             </div>
-            <div class="menu-item" data-category="food" data-en="Mussels in White Wine Sauce" data-ru="Мидии в Белом Винном Соусе">
+            <div class="menu-item" data-category="food">
                 <span>Mussels in White Wine Sauce</span><span class="price">25.00</span>
             </div>
-            <div class="menu-item" data-category="food" data-en="Mussels in tomato sauce" data-ru="Мидии в томатном соусе">
+            <div class="menu-item" data-category="food">
                 <span>Mussels in tomato sauce</span><span class="price">25.00</span>
             </div>
+            
         </section>
     </div>
 
@@ -602,16 +594,6 @@
                 imageContainer.style.display = 'none';
             }
         }
-
-        function setLanguage(lang) {
-            const elements = document.querySelectorAll('[data-en], [data-ru]');
-            elements.forEach(element => {
-                element.textContent = element.getAttribute(`data-${lang}`);
-            });
-        }
-
-        // Set default language
-        setLanguage('en');
     </script>
 </body>
 </html>
