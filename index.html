@@ -89,7 +89,7 @@
         
         <nav>
             <button class="filter-button" onclick="toggleFilter(this, 'all')" data-en="ALL" data-ru="ВСЕ">ALL</button>
-            <button class="filter-button" onclick="toggleFilter(this, 'soft-drinks')" data-en="Soft drinks" data-ru="Безалкогольные напитки">Soft drinks</button>
+            <button class="filter-button" onclick="toggFleFilter(this, 'soft-drinks')" data-en="Soft drinks" data-ru="Безалкогольные напитки">Soft drinks</button>
             <button class="filter-button" onclick="toggleFilter(this, 'cocktails')" data-en="Cocktails" data-ru="Коктейли">Cocktails</button>
             <button class="filter-button" onclick="toggleFilter(this, 'wine')" data-en="Wine" data-ru="Вино">Wine</button>
             <button class="filter-button" onclick="toggleFilter(this, 'beer')" data-en="Beer" data-ru="Пиво">Beer</button>
@@ -500,26 +500,15 @@
                 <span>DESSERTS</span>
             </div>
             <!-- Desserts List -->
-            <div class="menu-item" data-category="snacks">
-                <span data-en="Sour Cream Cake" data-ru="Торт из Сметаны">Sour Cream Cake</span><span class="price">7.00</span>
-            </div>
-            <div class="menu-item" data-category="snacks">
-                <span data-en="Dessert Truffle" data-ru="Десерт Трюфель">Dessert Truffle</span><span class="price">10.00</span>
-            </div>
-            <div class="menu-item" data-category="snacks">
-                <span data-en="Tiramisu" data-ru="Тирамису">Tiramisu</span><span class="price">10.00</span>
-            </div>
-            <div class="menu-item" data-category="snacks">
-                <span data-en="Baklava" data-ru="Баклава">Baklava</span><span class="price">6.00</span>
-            </div>
-            <div class="menu-item" data-category="snacks">
-                <span data-en="Banana Fruit Tart" data-ru="Банановый Фруктовый Тарт">Banana Fruit Tart</span><span class="price">10.00</span>
-            </div>
+            
             <div class="menu-item" data-category="snacks">
                 <span data-en="Ice Cream" data-ru="Мороженое">Ice Cream</span><span class="price">7.00</span>
             </div>
             <div class="menu-item" data-category="snacks">
-                <span data-en="Fruit plate" data-ru="Фруктовая Тарелка">Fruit plate</span><span class="price">40.00</span>
+                <span data-en="Fruit plate" data-ru="Фруктовая Тарелка">Fruit plate</span><span class="price">45.00</span>
+            </div>
+            <div class="menu-item" data-category="snacks">
+                <span data-en="Watermelon-Melon" data-ru="Арбуз-Дыня">Fruit plate</span><span class="price">40.00</span>
             </div>
             <!-- Food Header -->
             <div class="menu-header" data-category="food" data-en="FOOD" data-ru="ЕДА">
@@ -530,46 +519,42 @@
                 <span data-en="HOT DOG" data-ru="ХОТ-ДОГ">HOT DOG</span><span class="price">12.00</span>
             </div>
             <div class="menu-item" data-category="food">
+                <span data-en="sandwich" data-ru="сендвич">HOT DOG</span><span class="price">15.00</span>
+            </div>
+            <div class="menu-item" data-category="food">
                 <span data-en="FRENCH FRIES" data-ru="КАРТОФЕЛЬ ФРИ">FRENCH FRIES</span><span class="price">10.00</span>
             </div>
             <div class="menu-item" data-category="food">
                 <span data-en="MEXICAN POTATOES" data-ru="МЕКСИКАНСКИЙ КАРТОФЕЛЬ">MEXICAN POTATOES</span><span class="price">14.00</span>
             </div>
-            <div class="menu-item" data-category="food">
-                <span data-en="HOMEMADE CHIPS" data-ru="ДОМАШНИЕ ЧИПСЫ">HOMEMADE CHIPS</span><span class="price">12.00</span>
-            </div>
+            
             <div class="menu-item" data-category="food">
                 <span data-en="Chicken Nuggets" data-ru="Куриные Наггетсы">Chicken Nuggets</span><span class="price">15.00</span>
             </div>
             <div class="menu-item" data-category="food">
-                <span data-en="CHEESE CROQUETTES" data-ru="СЫРНЫЕ КРОКЕТЫ">CHEESE CROQUETTES</span><span class="price">15.00</span>
+                <span data-en="smoked pork ribs" data-ru="свиные копченые ребрышки">Chicken Nuggets</span><span class="price">25.00</span>
             </div>
-            <div class="menu-item" data-category="food">
-                <span data-en="CHEESE ROLLS" data-ru="СЫРНЫЕ РУЛЕТЫ">CHEESE ROLLS</span><span class="price">15.00</span>
-            </div>
-            <div class="menu-item" data-category="food">
-                <span data-en="SPINACH ROLLS" data-ru="РУЛЕТЫ СО ШПИНАТОМ">SPINACH ROLLS</span><span class="price">15.00</span>
-            </div>
-            <div class="menu-item" data-category="food">
-                <span data-en="FALAFEL BALLS" data-ru="ШАРЫ ФАЛАФЕЛЯ">FALAFEL BALLS</span><span class="price">17.00</span>
-            </div>
-            <div class="menu-item" data-category="food">
-                <span data-en="CHEESE BALLS" data-ru="СЫРНЫЕ ШАРЫ">CHEESE BALLS</span><span class="price">20.00</span>
-            </div>
-            <div class="menu-item" data-category="food">
-                <span data-en="CRISPY BALLS WITH SPINACH AND CHEESE" data-ru="ХРУСТЯЩИЕ ШАРЫ СО ШПИНАТОМ И СЫРОМ">CRISPY BALLS WITH SPINACH AND CHEESE</span><span class="price">18.00</span>
-            </div>
+            
+           
+            
+           
             <div class="menu-item" data-category="food">
                 <span data-en="ONION RINGS" data-ru="КОЛЬЦА ЛУКА">ONION RINGS</span><span class="price">15.00</span>
             </div>
             <div class="menu-item" data-category="food">
-                <span data-en="Tempura Shrimp" data-ru="Креветки Темпура">Tempura Shrimp</span><span class="price">30.00</span>
+                <span data-en="King Shrimp" data-ru="Королевские Креветки">Tempura Shrimp</span><span class="price">30.00</span>
+            </div>
+            <div class="menu-item" data-category="food">
+                <span data-en="tempura squid" data-ru="кальмары в темпуре">Mussels in White Wine Sauce</span><span class="price">30.00</span>
             </div>
             <div class="menu-item" data-category="food">
                 <span data-en="Mussels in White Wine Sauce" data-ru="Мидии в Белом Винном Соусе">Mussels in White Wine Sauce</span><span class="price">25.00</span>
             </div>
             <div class="menu-item" data-category="food">
                 <span data-en="Mussels in tomato sauce" data-ru="Мидии в томатном соусе">Mussels in tomato sauce</span><span class="price">25.00</span>
+            </div>
+            <div class="menu-item" data-category="food">
+                <span data-en="Mussels in cream sauce" data-ru="Мидии в сливочном соусе">Mussels in tomato sauce</span><span class="price">25.00</span>
             </div>
         </section>
     </div>
